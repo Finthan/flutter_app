@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
             ),
             ),
             const SizedBox(height: 4,),
-            s
+
             const SizedBox(height: 24,),
 
             const Padding(
