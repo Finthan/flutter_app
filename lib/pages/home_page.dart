@@ -1,8 +1,5 @@
-import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_app/model/cart_model.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 import '../components/grocery_item_tile.dart';
@@ -19,10 +16,10 @@ class HomePage extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) {
-          return CartPage();
+          return const CartPage();
         }, )),
         backgroundColor: Colors.black,
-        child: Icon(Icons.shopping_bag),
+        child: const Icon(Icons.shopping_bag),
       ),
       body: SafeArea(
         child: Column(
@@ -31,7 +28,7 @@ class HomePage extends StatelessWidget {
           [
             const SizedBox(height: 48),
             const Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0,),
+            padding: EdgeInsets.symmetric(horizontal: 24.0,),
             child: Text(
               'Goog morning,',
             ),
@@ -41,7 +38,7 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 24,),
 
             const Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              padding: EdgeInsets.symmetric(horizontal: 24.0),
               child: Divider(),
             ),
 
@@ -62,7 +59,7 @@ class HomePage extends StatelessWidget {
                 child: Consumer<CartModel>(builder: (context, value, child) {
                   return GridView.builder(
                       itemCount: value.shopItems.length,
-                      padding: EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(12),
                       gridDelegate:
                       const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
